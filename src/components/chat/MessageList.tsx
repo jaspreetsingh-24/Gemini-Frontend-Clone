@@ -50,12 +50,12 @@ const MessageList: React.FC<MessageListProps> = ({ messages }) => {
             {/* Avatar */}
             {message.sender === "user" ? (
               <img
-                src="../public/jaspreet.jpg"
+                src="/jaspreet.jpg"
                 className="w-8 h-8 rounded-full bg-gray-400 flex items-center justify-center"
               />
             ) : (
               <img
-                src="../public/gemini_logo.svg"
+                src="/gemini_logo.svg"
                 alt="chat-bot logo"
                 className="w-8 h-8"
               />
@@ -107,3 +107,4 @@ const MessageList: React.FC<MessageListProps> = ({ messages }) => {
 };
 
 export default MessageList;
+
