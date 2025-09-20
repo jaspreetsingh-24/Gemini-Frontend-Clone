@@ -5,7 +5,7 @@ This project is a frontend clone of a Gemini-style conversational AI chat applic
 
 The application is built using **React + Vite**, with **Zustand** for state management and **Tailwind CSS** for styling.
 
-**Live Demo:** [https://gemini-frontend-clone-j2a7giys6-jaspreeth-singh-rajs-projects.vercel.app/]
+**Live Demo:** [**Add Your Deployed Vercel/Netlify Link Here**]
 
 
 ## Pages Description
@@ -65,7 +65,3 @@ open `http://localhost:5173` in browser.
 
 
 -----
-
-## \#\# Issues
-
-  * **Dark Mode Toggle:** The dark mode toggle feature is included in the UI but is currently not functional. I plan to fix this in a future update.

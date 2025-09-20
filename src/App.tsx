@@ -8,15 +8,15 @@ import { useEffect } from "react";
 
 function App() {
   const {  user } = useAuthStore();
-  const { darkMode } = useUiStore();
+  const { theme } = useUiStore();
 
   useEffect(() => {
-    if (darkMode) {
+    if (theme === 'dark') {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [darkMode]);
+  }, [theme]);
 
   const renderContent = () => {
     

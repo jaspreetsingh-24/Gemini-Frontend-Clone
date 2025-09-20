@@ -90,7 +90,7 @@ export const LoginForm: React.FC = () => {
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
         placeholder="Enter your phone number"
-        className="w-full p-3 border border-slate-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-slate-100 dark:bg-slate-700 dark:border-slate-600 dark:text-white"
+        className="w-full p-3 border border-slate-300 rounded-md text-black focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-slate-100 dark:bg-slate-700 dark:border-slate-600 dark:text-white"
       />
     </div>
 
@@ -113,7 +113,7 @@ export const LoginForm: React.FC = () => {
                 value={otpInput}
                 onChange={(e) => setOtpInput(e.target.value)}
                 maxLength={6}
-                placeholder="Enter OTP"
+                placeholder="Enter OTP: 123456"
                 className="w-full p-3 border border-slate-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-center tracking-widest bg-slate-100 dark:bg-slate-700 dark:border-slate-600 dark:text-white"
               />
             </div>

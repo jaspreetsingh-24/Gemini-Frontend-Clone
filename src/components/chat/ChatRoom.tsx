@@ -40,6 +40,7 @@ const Chatroom: React.FC = () => {
 
       {/* Input */}
       <MessageInput onSendMessage={handleSendMessage} isLoading={isTyping} />
+
     </div>
   );
 };

@@ -2,10 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import { Send } from "lucide-react";
 import ImageUpload from "../ui/ImageUpload";
 
-
-
 interface MessageInputProps {
-  onSendMessage: (message: string,image:string|undefined) => void;
+  onSendMessage: (message: string, image: string | undefined) => void;
   isLoading: boolean;
 }
 
@@ -14,21 +12,22 @@ const MessageInput: React.FC<MessageInputProps> = ({
   isLoading,
 }) => {
   const [text, setText] = useState("");
-  const [imageSrc, setImageSrc] = useState<string>("");
+  const [imageSrc, setImageSrc] = useState<string | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  // Auto-grow textarea height
   useEffect(() => {
     if (textareaRef.current) {
       textareaRef.current.style.height = "auto";
-      textareaRef.current.style.height = textareaRef.current.scrollHeight + "px";
+      textareaRef.current.style.height =
+        textareaRef.current.scrollHeight + "px";
     }
   }, [text]);
 
   const handleSend = () => {
     if (text.trim() && !isLoading) {
-      onSendMessage(text,imageSrc);
+      onSendMessage(text, imageSrc || undefined);
       setText("");
+      setImageSrc(null);
     }
   };
 
@@ -44,7 +43,7 @@ const MessageInput: React.FC<MessageInputProps> = ({
       <div className="flex items-end gap-2 sm:gap-3">
         {/* Image upload button */}
         <div className="flex-shrink-0">
-          <ImageUpload  onImageUpload={setImageSrc}/>
+          <ImageUpload value={imageSrc} onChange={setImageSrc} />
         </div>
 
         {/* Textarea */}
